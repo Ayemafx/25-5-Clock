@@ -67,10 +67,6 @@ function App() {
     }));
   }
 
-  const changeBreakTime = (time: number) => {
-    if (displayState.timerRunning) return;
-    setBreakTime(time);
-  }
 
   const decrementDisplay = () => {
     setDisplayState((prev) => ({
@@ -79,15 +75,6 @@ function App() {
     }))
   }
 
-  const changeSessionTime = (time: number) => {
-    if (displayState.timerRunning) return;
-    setSessionTime(time);
-    setDisplayState({
-      time: time,
-      timeType: "Session",
-      timerRunning: false
-    });
-  };
 
   return (
     <div className="clock">
